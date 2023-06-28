@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Galleries</title>
+  <style>
+    /* CSS for the gallery */
+    .gallery-card {
+      display: inline-block;
+      width: 200px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .expanded {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .expanded img {
+      width: 33.33%;
+      height: auto;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-card" onclick="expandGallery(this)">
+    <img src="con1.jpg" alt="Gallery 1">
+    <div class="expanded">
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+    </div>
+  </div>
+
+  <div class="gallery-card" onclick="expandGallery(this)">
+    <img src="con2.jpg" alt="Gallery 2">
+    <div class="expanded">
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+      <img src="con1.jpg" onclick="expandImage(this)" />
+    </div>
+  </div>
+
+  <!-- Add more gallery cards here -->
+
+  <script>
+    function expandGallery(card) {
+      card.classList.toggle("expanded");
+    }
+
+    function expandImage(img) {
+      img.classList.toggle("expanded");
+    }
+  </script>
+</body>
+</html>

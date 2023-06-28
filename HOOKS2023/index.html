@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction Company</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon_slim.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+</head>
+<body>
+  <header>
+    <img src="nav-logo.png" alt="">
+  </header>
+
+  <nav class="sticky">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Work Gallery</a></li>
+      <li><a href="#bio">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="hero" id="home">
+    <h2>Expert Construction and Renovation Services in the Greater Seattle Area.</h2>
+    <img src="con1.jpg" class="hero-img">
+  </div>
+
+  <div class="content" id="services">
+    <h2>Services</h2>
+    <p>Content for the Services section...</p>
+  </div>
+
+  <div class="content" id="gallery">
+    <h2>Project Gallery</h2>
+    <p>Content for the Project Gallery section...</p>
+    <div class="carousel-grid">
+
+      <div class="carousel-wrapper">
+        <h3>Project Name</h3>
+        <div class="carousel">
+          <div><img src="con1.jpg" alt="con 1" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con2.jpg" alt="con 2" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con3.jpg" alt="con 3" class="carousel-img" onclick="openLightbox(this)"></div>
+        </div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <h3>Project Name</h3>
+        <div class="carousel">
+          <div><img src="con1.jpg" alt="con 1" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con2.jpg" alt="con 2" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con3.jpg" alt="con 3" class="carousel-img" onclick="openLightbox(this)"></div>
+        </div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <h3>Project Name</h3>
+        <div class="carousel">
+          <div><img src="con1.jpg" alt="con 1" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con2.jpg" alt="con 2" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con3.jpg" alt="con 3" class="carousel-img" onclick="openLightbox(this)"></div>
+        </div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <h3>Project Name</h3>
+        <div class="carousel">
+          <div><img src="con1.jpg" alt="con 1" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con2.jpg" alt="con 2" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con3.jpg" alt="con 3" class="carousel-img" onclick="openLightbox(this)"></div>
+        </div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <h3>Project Name</h3>
+        <div class="carousel">
+          <div><img src="con1.jpg" alt="con 1" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con2.jpg" alt="con 2" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con3.jpg" alt="con 3" class="carousel-img" onclick="openLightbox(this)"></div>
+        </div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <h3>Project Name</h3>
+        <div class="carousel">
+          <div><img src="con1.jpg" alt="con 1" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con2.jpg" alt="con 2" class="carousel-img" onclick="openLightbox(this)"></div>
+          <div><img src="con3.jpg" alt="con 3" class="carousel-img" onclick="openLightbox(this)"></div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+  <div id="lightbox-modal" class="lightbox-modal">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-image" class="lightbox-image" src="" alt="">
+  </div>
+
+  <div class="content" id="bio">
+    <h2>About Us</h2>
+    <p>Content for the Projects section...</p>
+  </div>
+
+  <div class="content" id="contact">
+    <h2>Contact</h2>
+    <p>Content for the Contact section...</p>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="contact-info">
+        <h4>Contact Us</h4>
+        <p>123 Main Street</p>
+        <p>City, State ZIP</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@example.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Your Construction Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        centerMode: true,
+        centerPadding: '0',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false
+            }
+          }
+        ]
+      });
+
+      var contentHeight = $('.content').outerHeight();
+      $('.carousel img').css('max-height', contentHeight);
+    });
+  </script>
+  <script>
+    function openLightbox(image) {
+      var modal = document.getElementById("lightbox-modal");
+      var modalImage = document.getElementById("lightbox-image");
+  
+      modal.style.display = "flex";
+      modalImage.src = image.src;
+    }
+  
+    function closeLightbox() {
+      var modal = document.getElementById("lightbox-modal");
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>
